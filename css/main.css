@@ -79,7 +79,7 @@ a {
 a:focus,
 a:hover {
     text-decoration: none;
-    color: #38CCCC
+    color: #30BABA
 }
 .light {
     font-weight: 100
@@ -316,10 +316,10 @@ a:hover {
 }
 .btn-default:focus,
 .btn-default:hover {
-    border: 1px solid #38CCCC;
+    border: 1px solid #30BABA;
     outline: 0;
     color: #000;
-    background-color: #38CCCC
+    background-color: #30BABA
 }
 ul.banner-social-buttons {
     margin-top: 0
@@ -424,7 +424,11 @@ img::-moz-selection {
      text-align: center
  }
 .timeline>li .timeline-image:hover {
-    border: 3px solid #38CCCC;
+    border: 3px solid #30BABA;
+}
+.portfolio-link:active,
+.portfolio-link:focus {
+    outline: none;
 }
  .timeline>li .timeline-image h4 {
      font-size: 40px;
@@ -631,7 +635,7 @@ img::-moz-selection {
     border: 3px solid #46FFFF;
 }
 .portfolio-image:hover {
-    border: 3px solid #38CCCC;
+    border: 3px solid #30BABA;
 }
 .portfolio-item h3 {
     padding-top: 20px;
