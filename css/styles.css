@@ -1,0 +1,19 @@
+.clearfix {
+	clear: both;
+}
+
+.input-field {
+	position: fixed;
+	padding-bottom: 10px;
+	bottom: 0px;
+	width: inherit;
+	background: white;
+	background-clip: padding-box;
+	-webkit-box-shadow: 0px 0px 5px 5px rgba(255,255,255,1);
+	-moz-box-shadow: 0px 0px 5px 5px rgba(255,255,255,1);
+	box-shadow: 0px 0px 5px 5px rgba(255,255,255,1);	
+}
+
+#result div:last-child {
+	margin-bottom: 80px
+}
