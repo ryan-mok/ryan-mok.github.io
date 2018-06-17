@@ -4,17 +4,12 @@ body {
     letter-spacing: -0.1px;
 }
 
-h1 {
+h2 {
 	text-transform: uppercase;
 }
 
 h5 {
 	padding-left: 2pt;
-}
-
-.last-name {
-	letter-spacing: 1px;
-	font-size: 103%;
 }
 
 .small-caps {
@@ -34,7 +29,16 @@ h5 {
 	background-clip: padding-box;
 	-webkit-box-shadow: 0px 0px 5px 5px rgba(255,255,255,1);
 	-moz-box-shadow: 0px 0px 5px 5px rgba(255,255,255,1);
-	box-shadow: 0px 0px 5px 5px rgba(255,255,255,1);	
+	box-shadow: 0px 0px 5px 5px rgba(255,255,255,1);
+}
+
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid #00b8d4;
+	box-shadow: 0 1px 0 0 #00b8d4;
+}
+
+.card-panel {
+	padding: 10px 20px
 }
 
 #result div:last-child {
