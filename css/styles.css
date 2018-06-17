@@ -1,3 +1,26 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    letter-spacing: -0.1px;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+h5 {
+	padding-left: 2pt;
+}
+
+.last-name {
+	letter-spacing: 1px;
+	font-size: 103%;
+}
+
+.small-caps {
+	font-size: 85%
+}
+
 .clearfix {
 	clear: both;
 }
