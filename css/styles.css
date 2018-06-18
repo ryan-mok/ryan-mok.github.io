@@ -1,0 +1,60 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    letter-spacing: -0.1px;
+}
+
+h2 {
+	text-transform: uppercase;
+}
+
+h5 {
+	padding-left: 2pt;
+}
+
+.small-caps {
+	font-size: 85%
+}
+
+.clearfix {
+	clear: both;
+}
+
+.input-field {
+	position: fixed;
+	padding-bottom: 10px;
+	bottom: 0px;
+	width: inherit;
+	background: white;
+	background-clip: padding-box;
+	-webkit-box-shadow: 0px 0px 5px 5px rgba(255,255,255,1);
+	-moz-box-shadow: 0px 0px 5px 5px rgba(255,255,255,1);
+	box-shadow: 0px 0px 5px 5px rgba(255,255,255,1);
+}
+
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid #00b8d4;
+	box-shadow: 0 1px 0 0 #00b8d4;
+}
+
+.card-panel {
+	padding: 10px 20px
+}
+
+#result div:last-child {
+	margin-bottom: 80px
+}
+
+.fixed-action-btn {
+	margin-top: 45px;
+	margin-right: -25px;
+	position: relative
+}
+
+#linkedin{
+	background-color: #0077B5
+}
+
+#github {
+	background-color: #333
+}

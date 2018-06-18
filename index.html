@@ -2,618 +2,77 @@
 <html lang="en">
 
 <head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100328481-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+		gtag('config', 'UA-100328481-1');
+	</script>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#46ffff">
-    <meta name="theme-color" content="#46ffff">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#84ffff">
+    <meta name="theme-color" content="#84ffff">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<script src="js/ApiAi.js"></script>
+	<script src="js/functions.js"></script>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 
-    <title>Ryan Mok</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Theme CSS -->
-    <link href="css/main.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-100328481-1', 'auto');
-	  ga('send', 'pageview');
-	</script>
-
+	 <title>Ryan Mok</title>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-user"></i> Ryan <span class="light" style="font-size: 103%">Mok</span>
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#experience">Experience</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#education">Education</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#awards">Awards</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Ryan <span class="light" style="letter-spacing: 1px; font-size: 103%">Mok</span></h1>
-                        <p class="intro-text">Systems Design Engineering<br>University of Waterloo</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-1">
-                <h2><i class="fa fa-comments"></i> About Me</h2>
-                <p>Software: Node.js, Express, Python, Swift, Java, C++, Perl, Alexa Skills Kit, Dialogflow, Firebase, Bootstrap<br>
-                Design: Personas, user interviews, user journey maps, empathy maps, usability testing, design principles<br>
-                Hardware: Arduino, motor controllers, digital and analog sensors, circuit design<br>
-                Communication: Customer-facing interactions, cross-departmental collaboration, bilingual (English & Chinese)</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="content-section text-center">
-        <div class="experience-section">
-            <div class="container">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2><i class="fa fa-briefcase"></i> Experience</h2>
-                     <div class="row">
-		                <div class="col-lg-12">
-		                    <ul class="timeline">
-		                        <li class="timeline-inverted">
-                                    <div class="timeline-image">
-                                        <a href="#Manulife" class="portfolio-link" data-toggle="modal">
-                                            <img class="img-circle img-responsive" src="img/logos/Manulife.png" alt="Manulife">
-                                        </a>
-                                    </div>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h3>Manulife</h3>
-                                            <h4>Solutions Prototype Developer - RED Lab (Communitech)</h4>
-                                        </div>
-                                        <div class="timeline-body">
-                                            <p>Sep 2017 - Dec 2017</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-		                            <div class="timeline-image">
-		                                <a href="#AMD" class="portfolio-link" data-toggle="modal">
-		                                	<img class="img-circle img-responsive" src="img/logos/AMD.png" alt="AMD">
-		                                </a>
-		                            </div>
-		                            <div class="timeline-panel">
-		                                <div class="timeline-heading">
-		                                    <h3>AMD</h3>
-		                                    <h4>Technical Marketing Engineering</h4>
-		                                </div>
-		                                <div class="timeline-body">
-		                                    <p>Jan 2017 - Apr 2017</p>
-		                                </div>
-		                            </div>
-		                        </li>
-		                        <li class="timeline-inverted">
-		                            <div class="timeline-image">
-		                                <a href="#Nulogy" class="portfolio-link" data-toggle="modal">
-		                                	<img class="img-circle img-responsive" src="img/logos/Nulogy.png" alt="Nulogy">
-		                                </a>
-		                            </div>
-		                            <div class="timeline-panel">
-		                                <div class="timeline-heading">
-		                                    <h3>Nulogy</h3>
-		                                    <h4>Systems Integration Designer Intern</h4>
-		                                </div>
-		                                <div class="timeline-body">
-		                                    <p>Jun 2016 - Aug 2016</p>
-		                                </div>
-		                            </div>
-		                        </li>
-		                        <li>
-		                            <div class="timeline-image">
-		                                <a href="#DJI" class="portfolio-link" data-toggle="modal">
-		                                	<img class="img-circle img-responsive" src="img/logos/DJI.png" alt="DJI">
-		                                </a>
-		                            </div>
-		                            <div class="timeline-panel">
-		                                <div class="timeline-heading">
-		                                    <h3>DJI</h3>
-		                                    <h4>Factory Summer Intern</h4>
-		                                </div>
-		                                <div class="timeline-body">
-		                                    <p>Jul 2015 - Aug 2015</p>
-		                                </div>
-		                            </div>
-		                        </li>
-		                        <li class="timeline-inverted">
-		                            <div class="timeline-image">
-		                                <a href="#HKCSS" class="portfolio-link" data-toggle="modal">
-		                                	<img class="img-circle img-responsive" src="img/logos/HKCSS.png" alt="HKCSS">
-		                                </a>
-		                            </div>
-		                            <div class="timeline-panel">
-		                                <div class="timeline-heading">
-		                                    <h3>The Hong Kong Council of Social Service</h3>
-		                                    <h4>Volunteer - WebOrganic</h4>
-		                                </div>
-		                                <div class="timeline-body">
-		                                    <p>Aug 2014 - Dec 2015</p>
-		                                </div>
-		                            </div>
-		                        </li>
-		                        <li class="timeline-inverted">
-		                            <div class="timeline-image" style="border: 2px solid #FFFFFF;">
-		                                <h4>.<br>.<br>.</h4>
-		                            </div>
-		                        </li>
-		                    </ul>
-		                </div>
-		            </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="content-section text-center">
-        <div class="projects-section">
-            <div class="container">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2><i class="fa fa-lightbulb-o"></i> Projects</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 portfolio-item">
-                            <a href="#uwAPI" class="portfolio-link" data-toggle="modal">
-                                <img src="img/projects/uwAPI.png" class="img-responsive portfolio-image" alt="">
-                            </a>
-                            <h3>uwAPI</h3>
-                            <p>Side Project</p>
-                        </div>
-	                <div class="col-md-4 col-sm-6 portfolio-item">
-	                    <a href="#Wanderloo" class="portfolio-link" data-toggle="modal">
-	                        <img src="img/projects/Wanderloo.png" class="img-responsive portfolio-image" alt="">
-	                    </a>
-	                    <h3>Wanderloo</h3>
-	                    <p>Waterloo EngHack</p>
-                    </div>
-	                <div class="col-md-4 col-sm-6 portfolio-item">
-	                    <a href="#CIS-Robotics" class="portfolio-link" data-toggle="modal">
-	                        <img src="img/projects/CIS-Robotics.jpg" class="img-responsive portfolio-image" alt="">
-	                    </a>
-	                    <h3>CIS Robotics Team</h3>
-	                    <p>Chinese International School</p>
-	                </div>
-	            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="content-section text-center">
-        <div class="education-section">
-            <div class="container">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2><i class="fa fa-graduation-cap"></i> Education</h2>
-                    <div class="education">
-	                    <h3><a href="#UWaterloo" class="highlight" data-toggle="modal">University of Waterloo</a></h3>
-	                    <p>Candidate for Bachelor of Applied Science (B.A.Sc.), Systems Design Engineering, Honours, Co-op</p>
-	                    <p>Class of 2021</p>
-	                </div>
-	                <div class="education">
-	                    <h3><a href="#Shad" class="highlight" data-toggle="modal">SHAD Waterloo</a></h3>
-	                    <p>Fellow</p>
-	                    <p>2014</p>
-	                </div>
-	                <div class="education" style="margin-bottom: 0px">
-	                    <h3><a href="#CIS" class="highlight" data-toggle="modal">Chinese International School</a></h3>
-	                    <p>Bilingual International Baccalaureate Diploma</p>
-	                    <p>Class of 2016</p>
-	                </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Awards Section -->
-    <section id="awards" class="content-section text-center">
-        <div class="awards-section">
-            <div class="container">
-                <div class="col-lg-10 col-lg-offset-1 awards">
-                    <h2><i class="fa fa-trophy"></i> Awards</h2>
-                    <h3>First in Class Engineering Scholarship</h3>
-                    <p style="padding-bottom: 45px">University of Waterloo</p>
-                    <h3>Dean's Honours List</h3>
-                    <p style="padding-bottom: 45px">University of Waterloo</p>
-                    <h3>President's Scholarship of Distinction</h3>
-                    <p style="padding-bottom: 45px">University of Waterloo</p>
-                    <a href="#awards-details" class="btn btn-default btn-lg" data-toggle="modal"><span class="network-name">More</span></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-1">
-                <h2><i class="fa fa-send"></i> Contact Me</h2>
-                <p>Please feel free to contact me by visiting my LinkedIn page</p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://linkedin.com/in/ryanmok" class="btn btn-default btn-lg"><i class="fa fa-linkedin-square fa-fw"></i> <span class="network-name">LinkedIn</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p><span class="light">This site is best viewed in desktop browsers<br>Mobile optimisations are coming soon</span></p><br>
-            <p><span class="light">All photos taken by Ryan Mok</span></p><br>
-            <p><span class="light">Copyright &copy; Ryan Mok 2017</span></p>
-        </div>
-    </footer>
-
-    <!-- Job Descriptions -->
-     <div class="portfolio-modal modal fade" id="Manulife" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container" style="width: 85%">
-                    <div class="modal-body">
-                        <h2>Solutions Prototype Developer - RED Lab (Communitech)</h2>
-                        <h3>Manulife</h3>
-                        <h4>Sep 2017 - Dec 2017</h4>
-                        <p>Designed and developed new ways for insurance customers to interact with technology using the Alexa Skills Kit, Node.js, Express, AWS, Bootstrap, Swift and more</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-     <div class="portfolio-modal modal fade" id="AMD" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container" style="width: 85%">
-                    <div class="modal-body">
-                        <h2>Technical Marketing Engineering</h2>
-                        <h3>AMD</h3>
-                        <h4>Jan 2017 - Apr 2017</h4>
-                        <p>Scripted automation processes using Perl to optimise game testing procedures to provide performance data on graphics cards to marketing teams</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="Nulogy" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container" style="width: 85%">
-                    <div class="modal-body">
-                        <h2>Systems Integration Designer Intern</h2>
-                        <h3>Nulogy</h3>
-                        <h4>Jun 2016 - Aug 2016</h4>
-                        <p>Developed custom outputs for different clients using HTML, CSS and Ruby on Rails in a cross-departmental role</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="DJI" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container" style="width: 85%">
-                    <div class="modal-body">
-                        <h2>Factory Summer Intern</h2>
-                        <h3>DJI</h3>
-                        <h4>Jul 2015 - Aug 2015</h4>
-                        <p>Interned at Quality Assurance, Incoming Quality Control and Engineering departments at the DJI factory in Shenzhen</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="HKCSS" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container" style="width: 85%">
-                    <div class="modal-body">
-                        <h2>Volunteer - WebOrganic</h2>
-                        <h3>The Hong Kong Council of Social Service</h3>
-                        <h4>Aug 2014 - Dec 2015</h4>
-                        <p>Provided technical help at the Hong Kong Council of Social Service Internet Learning Resource Centre (WebOrganic) to disadvantaged families through IT support and educating clients about computer systems</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-     <!-- Project Descriptions -->
-     <div class="portfolio-modal modal fade" id="uwAPI" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container" style="width: 85%">
-                    <div class="modal-body">
-                        <h2>uwAPI - Actions on Google</h2>
-                        <h3>Side Project</h3>
-                        <h4>Dec 2017</h4>
-                        <p>Developed an Actions on Google app with Dialogflow and Heroku to interact with the University of Waterloo Open Data API</p>
-                        <p>GitHub: <a href="https://github.com/ryan-mok/uwAPI">https://github.com/ryan-mok/uwAPI</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-     <div class="portfolio-modal modal fade" id="Wanderloo" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container" style="width: 85%">
-                    <div class="modal-body">
-                        <h2>Wanderloo - Trail Finder</h2>
-                        <h3>Waterloo EngHack</h3>
-                        <h4>Feb 2017</h4>
-                        <p>Developed a website with a team to find optimised walking trails using City of Waterloo Open Data</p>
-                        <p>Calculated and visualised different types of walking trails using Python, JavaScript and the Google Maps JavaScript API</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="CIS-Robotics" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container" style="width: 85%">
-                    <div class="modal-body">
-                        <h2>CIS Robotics Team Leader</h2>
-                        <h3>Chinese International School</h3>
-                        <h4>Aug 2010 - May 2016</h4>
-                        <p>Leader of school team for 5 years and expanded the team 4 times during this time</p>
-						<p>Competed in the MATE Underwater Robot Challenge against high school and university teams locally and internationally</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-	<!-- Education Descriptions -->
-	     <div class="portfolio-modal modal fade" id="UWaterloo" tabindex="-1" role="dialog" aria-hidden="true">
-	        <div class="modal-dialog">
-	            <div class="modal-content">
-	                <div class="close-modal" data-dismiss="modal">
-	                    <div class="lr">
-	                        <div class="rl">
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="container" style="width: 85%">
-	                    <div class="modal-body">
-	                        <h2>University of Waterloo</h2>
-	                        <h3>Systems Design Engineering</h3>
-	                        <h4>Sep 2016 - Present</h4>
-	                        <p>Relevant courses: Programming in C++, Digital Circuits, Graphics with SolidWorks, Human Factors in Design</p>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	    <div class="portfolio-modal modal fade" id="Shad" tabindex="-1" role="dialog" aria-hidden="true">
-	        <div class="modal-dialog">
-	            <div class="modal-content">
-	                <div class="close-modal" data-dismiss="modal">
-	                    <div class="lr">
-	                        <div class="rl">
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="container" style="width: 85%">
-	                    <div class="modal-body">
-	                        <h2>SHAD Waterloo</h2>
-	                        <h3>Fellow</h3>
-	                        <h4>Jun 2014 - Jul 2014</h4>
-	                        <p>Month-long summer course on STEM, business and entrepreneurship with emphasis on design and innovation</p>
-	                        <p>Worked collaboratively on a team design project to develop solutions on how Canadians can live sustainably</p>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	    <div class="portfolio-modal modal fade" id="CIS" tabindex="-1" role="dialog" aria-hidden="true">
-	        <div class="modal-dialog">
-	            <div class="modal-content">
-	                <div class="close-modal" data-dismiss="modal">
-	                    <div class="lr">
-	                        <div class="rl">
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="container" style="width: 85%">
-	                    <div class="modal-body">
-	                        <h2>Chinese International School</h2>
-	                        <h3>Bilingual International Baccalaureate Diploma</h3>
-	                        <h4>Aug 2002 - May 2016</h4>
-	                        <p>HL Subjects: Physics, Chemistry, Mathematics<br/>SL Subjects: English A Literature, Chinese A Language and Literature, Economics</p>
-	                        <p>Activities and Societies: CIS Robotics Team (Leader), Fencing Team (Captain), Get with the Program (Programming Club), Photography Club, Tennis Team, Model United Nations</p>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-
-	<!-- Awards Details -->
-	     <div class="portfolio-modal modal fade" id="awards-details" tabindex="-1" role="dialog" aria-hidden="true">
-	        <div class="modal-dialog" style="margin: 0; height: 100%; width: auto;">
-	            <div class="modal-content" style="min-height: 100%;">
-	                <div class="close-modal" data-dismiss="modal">
-	                    <div class="lr">
-	                        <div class="rl">
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="container" style="width: 85%">
-	                    <div class="modal-body awards">
-	                        <h3>First in Class Engineering Scholarship</h3>
-                            <p>University of Waterloo</p>
-                            <p>Aug 2017</p>
-                            <p class="details">Scholarships are presented to the top student in each class based on performance in terms 1B to 4A.</p>
-                            <h3>Dean's Honours List</h3>
-		                    <p>University of Waterloo</p>
-		                    <p>Aug 2017 & Dec 2016</p>
-		                    <p class="details">To achieve this standing for a particular term, students must be unconditionally promoted at the end of the term, and have their term average minus their percentile rank from the top for that academic term greater than or equal to 80. Students not in the top 10% of their class are normally not eligible.</p>
-		                    <h3>President's Scholarship of Distinction</h3>
-		                    <p>University of Waterloo</p>
-		                    <p>Sep 2016</p>
-		                    <p class="details">The President's Scholarship of Distinction is awarded to students with outstanding academic achievement and an admission average of 95% or higher.</p>
-	                        <h3>Achievement in Physics HL</h3>
-		                    <p>Chinese International School</p>
-		                    <p>May 2016</p>
-		                    <p class="details">The Achievement in Physics HL award is given to a student in the graduating class who has demonstrated outstanding achievement in the IB Physics HL course.</p>
-		                    <h3>Communitas Award</h3>
-		                    <p>Chinese International School</p>
-                            <p>May 2016</p>
-		                    <p class="details">The Communitas Award is given to students who have made significant contributions to the betterment of the school community.</p>
-		                    <h3>CISPTA IT Award In Memory of Christopher Berrisford</h3>
-		                    <p>Chinese International School</p>
-		                    <p>Jun 2014</p>
-		                    <p class="details" style="margin-bottom: 0px !important">The CISPTA IT Award in Memory of Mr. Christopher Berrisford is given to a student who shows self-motivation, leadership, and excellent organisational skills related to information technology.</p>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/grayscale.min.js"></script>
-
+<body>
+	<div id="header">
+		<div class="container">
+			<div class="row">
+				<div class="col s10">
+					<h2>R<span class="small-caps">yan</span> M<span class="small-caps">ok</span></h2>
+					<h5>Systems Design Engineering, University of Waterloo</h5>
+				</div>
+				<div class="col s2 right-align">
+					<div class="fixed-action-btn horizontal">
+						<a class="btn-floating btn-large cyan accent-4">
+							<i class="fas fa-link"></i>
+						</a>
+						<ul>
+							<li><a id="linkedin" href="https://linkedin.com/in/ryanmok" target="_blank" class="btn-floating"><i class="fab fa-linkedin-in"></i></a></li>
+							<li><a id="github" href="https://github.com/ryan-mok" target="_blank" class="btn-floating"><i class="fab fa-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="chatbot">
+		<div class="container">
+			<div class="row">
+				<div class="col s12">
+					<div id="result">
+					</div>
+				</div>
+			</div>
+			<div class="input-field">
+				<input placeholder="Type a message..." id="q" type="text">
+			</div>
+		</div>
+	</div>
+	<script defer src="js/layout.js"></script>
 </body>
 
 </html>
