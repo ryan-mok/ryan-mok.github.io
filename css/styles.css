@@ -44,3 +44,17 @@ h5 {
 #result div:last-child {
 	margin-bottom: 80px
 }
+
+.fixed-action-btn {
+	margin-top: 45px;
+	margin-right: -25px;
+	position: relative
+}
+
+#linkedin{
+	background-color: #0077B5
+}
+
+#github {
+	background-color: #333
+}
