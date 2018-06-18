@@ -35,7 +35,8 @@
 			result = "";
 			}
 			var responseNode = createResponseNode();
-		  setResponseOnNode(result, responseNode);
+			setResponseOnNode(result, responseNode);
+			window.scrollTo(0,document.body.scrollHeight);
 		})
 		.catch(function(err) {
 		  setResponseOnNode("Something went wrong. Please try again.", responseNode);
@@ -54,7 +55,6 @@
 	  node.className = "clearfix left-align left card-panel grey lighten-3";
 	  node.innerHTML = "Something went wrong. Please try again.";
 		resultDiv.appendChild(node);
-		window.scrollTo(0,document.body.scrollHeight);
 	  return node;
 	}
   
