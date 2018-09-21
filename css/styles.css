@@ -1,15 +1,19 @@
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 100;
-    letter-spacing: -0.1px;
+	letter-spacing: -0.1px;
+	background: #3b3838;
+	color: #eeeeee;
 }
 
 h2 {
 	text-transform: uppercase;
+	color: white;
 }
 
 h5 {
 	padding-left: 2pt;
+	color: white;
 }
 
 .small-caps {
@@ -21,20 +25,41 @@ h5 {
 }
 
 .input-field {
+	margin-bottom: 0rem;
+	padding-bottom: 1.8rem;
 	position: fixed;
-	padding-bottom: 10px;
 	bottom: 0px;
 	width: inherit;
-	background: white;
+	background: #3b3838;
 	background-clip: padding-box;
-	-webkit-box-shadow: 0px 0px 5px 5px rgba(255,255,255,1);
-	-moz-box-shadow: 0px 0px 5px 5px rgba(255,255,255,1);
-	box-shadow: 0px 0px 5px 5px rgba(255,255,255,1);
+	-webkit-box-shadow: 0px 0px 5px 5px #3b3838;
+	-moz-box-shadow: 0px 0px 5px 5px #3b3838;
+	box-shadow: 0px 0px 5px 5px #3b3838;
+}
+
+.input-field input {
+	font-family: 'Lato', sans-serif;
+    font-weight: 100;
+	letter-spacing: -0.1px;
+	color: white;
 }
 
 .input-field input[type=text]:focus {
-	border-bottom: 1px solid #00b8d4;
-	box-shadow: 0 1px 0 0 #00b8d4;
+	border-bottom: 1px solid #00b8d4 !important;
+	box-shadow: 0 1px 0 0 #00b8d4 !important;
+}
+
+::placeholder {
+    color: #999999;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #999999;
+}
+
+::-ms-input-placeholder {
+    color: #999999;
 }
 
 .card-panel {
@@ -45,16 +70,49 @@ h5 {
 	margin-bottom: 80px
 }
 
-.fixed-action-btn {
+.link-buttons {
 	margin-top: 45px;
-	margin-right: -25px;
-	position: relative
+	position: relative;
 }
 
-#linkedin{
+.link-buttons a {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.material-icons {
+	padding-left: 2px
+}
+
+#linkedin {
 	background-color: #0077B5
 }
 
 #github {
 	background-color: #333
+}
+
+::selection {
+    background-color: #eeeeee;
+    color: black;
+}
+
+::-moz-selection {
+    background-color: #eeeeee;
+    color: black;
+}
+
+::-o-selection {
+    background-color: #eeeeee;
+    color: black;
+}
+
+::-ms-selection {
+    background-color: #eeeeee;
+    color: black;
+}
+
+::-webkit-selection {
+    background-color: #eeeeee;
+    color: black;
 }
