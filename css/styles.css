@@ -62,6 +62,27 @@ h5 {
     color: #999999;
 }
 
+@keyframes fade-left {
+	0% {opacity: 0;}
+	50% {opacity: 0; transform: translateX(-20px);}
+	100% {opacity: 1; transform: translateX(0px);}
+}
+
+@keyframes fade-right {
+	0% {opacity: 0; transform: translateX(30px)}
+	100% {opacity: 1; transform: translateX(0px)}
+}
+
+.fade-left {
+	animation-name: fade-left;
+	animation-duration: 1s;
+}
+
+.fade-right {
+	animation-name: fade-right;
+	animation-duration: 0.5s;
+}
+
 .card-panel {
 	padding: 10px 20px
 }

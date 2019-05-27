@@ -48,14 +48,14 @@
 
 	function createQueryNode(query) {
 		var node = document.createElement('div');
-		node.className = "clearfix right-align right card-panel grey darken-3";
+		node.className = "clearfix right-align right card-panel grey darken-3 fade-right";
 		node.innerHTML = query;
 		resultDiv.appendChild(node);
 	}
 
 	function createResponseNode() {
 		var node = document.createElement('div');
-		node.className = "clearfix left-align left card-panel grey darken-4";
+		node.className = "clearfix left-align left card-panel grey darken-4 fade-left";
 		node.innerHTML = "Something went wrong. Please try again.";
 		resultDiv.appendChild(node);
 		return node;
