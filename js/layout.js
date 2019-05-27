@@ -20,6 +20,8 @@
 
 	function queryInputKeyDown(event) {
 		var value = queryInput.value;
+		
+		queryInput.focus();
 
 		if ((event.which !== ENTER_KEY_CODE && event.which !== LEFT_MOUSECLICK_CODE) || value == "") {
 			return;
