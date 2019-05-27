@@ -6,6 +6,16 @@ body {
 	color: #eeeeee;
 }
 
+@keyframes fade-header {
+	0% {opacity: 0; transform: translateY(-10px)}
+	100% {opacity: 1; transform: translateY(0px)}
+}
+
+#header {
+	animation-name: fade-header;
+	animation-duration: 1s;
+}
+
 h2 {
 	text-transform: uppercase;
 	color: white;
@@ -24,6 +34,11 @@ h5 {
 	clear: both;
 }
 
+@keyframes fade-input-field {
+	0% {opacity: 0; transform: translateY(10px)}
+	100% {opacity: 1; transform: translateY(0px)}
+}
+
 .input-field {
 	margin-bottom: 0rem;
 	padding-bottom: 1.8rem;
@@ -35,6 +50,8 @@ h5 {
 	-webkit-box-shadow: 0px 0px 5px 5px #3b3838;
 	-moz-box-shadow: 0px 0px 5px 5px #3b3838;
 	box-shadow: 0px 0px 5px 5px #3b3838;
+	animation-name: fade-input-field;
+	animation-duration: 1s;
 }
 
 .input-field input {
@@ -69,8 +86,8 @@ h5 {
 }
 
 @keyframes fade-right {
-	0% {opacity: 0; transform: translateX(30px)}
-	100% {opacity: 1; transform: translateX(0px)}
+	0% {opacity: 0; transform: translateY(30px)}
+	100% {opacity: 1; transform: translateY(0px)}
 }
 
 .fade-left {
