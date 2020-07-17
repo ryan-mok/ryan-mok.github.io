@@ -1,156 +1,26 @@
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 100;
-	letter-spacing: -0.1px;
-	background: #3b3838;
-	color: #eeeeee;
+	background: #222222;
+	color: #ebebeb;
+	margin:0 auto; 
 }
 
-@keyframes fade-header {
-	0% {opacity: 0; transform: translateY(-10px)}
-	100% {opacity: 1; transform: translateY(0px)}
+a {
+	color: #80C0FF;
 }
 
-#header {
-	animation-name: fade-header;
-	animation-duration: 1s;
-}
-
-h2 {
-	text-transform: uppercase;
-	color: white;
-}
-
-h5 {
-	padding-left: 2pt;
-	color: white;
-}
-
-.small-caps {
-	font-size: 85%
-}
-
-.clearfix {
-	clear: both;
-}
-
-@keyframes fade-input-field {
-	0% {opacity: 0; transform: translateY(10px)}
-	100% {opacity: 1; transform: translateY(0px)}
-}
-
-.input-field {
-	margin-bottom: 0rem;
-	padding-bottom: 1.8rem;
+.centred {
 	position: fixed;
-	bottom: 0px;
-	width: inherit;
-	background: #3b3838;
-	background-clip: padding-box;
-	-webkit-box-shadow: 0px 0px 5px 5px #3b3838;
-	-moz-box-shadow: 0px 0px 5px 5px #3b3838;
-	box-shadow: 0px 0px 5px 5px #3b3838;
-	animation-name: fade-input-field;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation-name: fade-in;
 	animation-duration: 1s;
 }
 
-.input-field input {
-	font-family: 'Lato', sans-serif;
-    font-weight: 100;
-	letter-spacing: -0.1px;
-	color: white;
-}
-
-.input-field input[type=text]:focus {
-	border-bottom: 1px solid #00b8d4 !important;
-	box-shadow: 0 1px 0 0 #00b8d4 !important;
-}
-
-::placeholder {
-    color: #999999;
-    opacity: 1;
-}
-
-:-ms-input-placeholder {
-    color: #999999;
-}
-
-::-ms-input-placeholder {
-    color: #999999;
-}
-
-@keyframes fade-left {
-	0% {opacity: 0;}
-	50% {opacity: 0; transform: translateX(-20px);}
-	100% {opacity: 1; transform: translateX(0px);}
-}
-
-@keyframes fade-right {
-	0% {opacity: 0; transform: translateY(30px)}
-	100% {opacity: 1; transform: translateY(0px)}
-}
-
-.fade-left {
-	animation-name: fade-left;
-	animation-duration: 1s;
-}
-
-.fade-right {
-	animation-name: fade-right;
-	animation-duration: 0.5s;
-}
-
-.card-panel {
-	padding: 10px 20px
-}
-
-#result div:last-child {
-	margin-bottom: 80px
-}
-
-.link-buttons {
-	margin-top: 45px;
-	position: relative;
-}
-
-.link-buttons a {
-	margin-left: 10px;
-	margin-bottom: 10px;
-}
-
-.material-icons {
-	padding-left: 2px
-}
-
-#linkedin {
-	background-color: #0077B5
-}
-
-#github {
-	background-color: #333
-}
-
-::selection {
-    background-color: #eeeeee;
-    color: black;
-}
-
-::-moz-selection {
-    background-color: #eeeeee;
-    color: black;
-}
-
-::-o-selection {
-    background-color: #eeeeee;
-    color: black;
-}
-
-::-ms-selection {
-    background-color: #eeeeee;
-    color: black;
-}
-
-::-webkit-selection {
-    background-color: #eeeeee;
-    color: black;
+@keyframes fade-in {
+	0% {opacity: 0; transform: translate(-50%, -40%);}
+	50% {opacity: 0; transform: translate(-50%, -47%);}
+	100% {opacity: 1; transform: translate(-50%, -50%);}
 }
