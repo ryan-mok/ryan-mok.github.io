@@ -1,4 +1,4 @@
-const animateTime = 500;
+const animateTime = 700;
 
 var currentlyScrolling = false;
 var position = 0;
@@ -13,9 +13,10 @@ function scrollDown() {
 }
 
 function scrollUp() {
-	if (!currentlyScrolling && position > 0) {
+	if (!currentlyScrolling) {
 		currentlyScrolling = true;
 		position--;
+		if (position < 0) position = 0
 		animate(position);
 	}
 }

@@ -1,0 +1,22 @@
+#experience { background: #333333; }
+#about { background: #222222; }
+
+#contact {
+	background-image: url("../images/contact.jpeg");
+	background-position: center;
+  	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h3 {
+	font-family: 'Pacifico', cursive;
+	font-size: 3rem;
+}
+
+p {
+	font-size: 1.5rem;
+}
+
+.icon {
+	font-size: 2rem;
+}
