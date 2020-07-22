@@ -32,15 +32,6 @@ function animate(position) {
 	});
 }
 
-function getElement() {
-	switch(position) {
-		case 0: return $('#home');
-		case 1: return $('#experience');
-		case 2: return $('#about');
-		case 3: return $('#contact');
-	}
-}
-
 $('body').scrollspy({target: ".navbar", offset: 50});
 
 $("#navbar a").on('click', function (event) {
@@ -82,7 +73,7 @@ $("#scroll-down").on('click', function (event) {
 
 
 $(document).ready(function () {
-	animate(0)
+	// animate(0)
 
 	$(document).bind('wheel', function (e) {
 		if (e.originalEvent.wheelDelta < 0) {
