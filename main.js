@@ -5,14 +5,16 @@ var position = 0;
 var touchStart;
 
 function scrollDown() {
-	if (!currentlyScrolling && position < $('.scroll-to').length - 1) {
+	if (!currentlyScrolling) {
 		currentlyScrolling = true;
 		position++;
+		if (position > 3) position = 3
 		animate(position);
 	}
 }
 
 function scrollUp() {
+	console.log(position)
 	if (!currentlyScrolling) {
 		currentlyScrolling = true;
 		position--;
@@ -30,13 +32,12 @@ function animate(position) {
 	});
 }
 
-function getPosition() {
-	for (var i = 0; i < $('.scroll-to').length; i++) {
-		var element = $('.scroll-to')[i];
-
-		if ($(document).scrollTop() >= $(element).offset().top) {
-			position = i;
-		}
+function getElement() {
+	switch(position) {
+		case 0: return $('#home');
+		case 1: return $('#experience');
+		case 2: return $('#about');
+		case 3: return $('#contact');
 	}
 }
 
@@ -48,6 +49,13 @@ $("#navbar a").on('click', function (event) {
 
 		event.preventDefault();
 		var hash = this.hash;
+
+		switch(hash) {
+			case "#home": position = 0; break;
+			case "#experience": position = 1; break;
+			case "#about": position = 2; break;
+			case "#contact": position = 3; break;
+		}
 
 		$('html, body').animate({
 			scrollTop: $(hash).offset().top
@@ -74,10 +82,9 @@ $("#scroll-down").on('click', function (event) {
 
 
 $(document).ready(function () {
-	getPosition()
+	animate(0)
 
 	$(document).bind('wheel', function (e) {
-		getPosition()
 		if (e.originalEvent.wheelDelta < 0) {
 			scrollDown();
 		} else {
@@ -87,7 +94,6 @@ $(document).ready(function () {
 	});
 
 	$(document).bind('mousewheel', function (e) {
-		getPosition()
 		if (e.originalEvent.wheelDelta < 0) {
 			scrollDown();
 		} else {
@@ -97,7 +103,6 @@ $(document).ready(function () {
 	});
 
 	$(document).bind('DOMMouseScroll', function (e) {
-		getPosition()
 		if (e.originalEvent.detail > 0) {
 			scrollDown();
 		} else {
@@ -107,7 +112,6 @@ $(document).ready(function () {
 	});
 
 	$(document).bind('touchstart', function (e) {
-		getPosition()
 		touchStart = e.originalEvent.touches[0].clientY;
 	});
 

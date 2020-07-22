@@ -53,8 +53,20 @@ body {
 	height: 5% !important;
 }
 
-@media (max-width: 576px) {
-	html { font-size: 0.7rem !important; }
-	.navbar { font-size: 1.43rem; }
-	.navbar-brand { font-size: 1.43rem; }
+.h-70 {
+	height: 70% !important;
+}
+
+.h-10 {
+	height: 10% !important;
+}
+
+.h-20 {
+	height: 20% !important;
+}
+
+@media (max-width: 575px) {
+	html { font-size: 0.6rem !important; }
+	.navbar { font-size: 1.67rem; }
+	.navbar-brand { font-size: 1.67rem; }
 }
