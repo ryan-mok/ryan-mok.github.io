@@ -73,7 +73,7 @@ $("#scroll-down").on('click', function (event) {
 
 
 $(document).ready(function () {
-	// animate(0)
+	animate(0)
 
 	$(document).bind('wheel', function (e) {
 		if (e.originalEvent.wheelDelta < 0) {
