@@ -8,18 +8,25 @@ function scrollDown() {
 	if (!currentlyScrolling) {
 		currentlyScrolling = true;
 		position++;
-		if (position > 3) position = 3
-		animate(position);
+		if (position > 3) {
+			position = 3;
+			currentlyScrolling = false;
+		} else {
+			animate(position);
+		}
 	}
 }
 
 function scrollUp() {
-	console.log(position)
 	if (!currentlyScrolling) {
 		currentlyScrolling = true;
 		position--;
-		if (position < 0) position = 0
-		animate(position);
+		if (position < 0) {
+			position = 0;
+			currentlyScrolling = false;
+		} else {
+			animate(position);
+		}
 	}
 }
 
