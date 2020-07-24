@@ -40,25 +40,25 @@ function animate(position) {
 }
 
 function init() {
-	$('#experience, #about, #contact').css("display", "none");
-	$('body, .navbar, #hello, #like, #love, #scroll-down').css("visibility", "hidden");
-	$('body, .navbar, #hello, #like, #love, #scroll-down').css("opacity", 0);
+	$('#experience, #about, #contact').css('display', 'none');
+	$('body, .navbar, #hello, #like, #love, #scroll-down').css('visibility', 'hidden');
+	$('body, .navbar, #hello, #like, #love, #scroll-down').css('opacity', 0);
 }
 
-$('body').scrollspy({target: ".navbar", offset: 50});
+$('body').scrollspy({target: '.navbar', offset: 50});
 
-$("#navbar a").on('click', function (event) {
-	if (this.hash !== "") {
+$('#navbar a').on('click', function (event) {
+	if (this.hash !== '') {
 		currentlyScrolling = true;
 
 		event.preventDefault();
 		var hash = this.hash;
 
 		switch(hash) {
-			case "#home": position = 0; break;
-			case "#experience": position = 1; break;
-			case "#about": position = 2; break;
-			case "#contact": position = 3; break;
+			case '#home': position = 0; break;
+			case '#experience': position = 1; break;
+			case '#about': position = 2; break;
+			case '#contact': position = 3; break;
 		}
 
 		$('html, body').animate({
@@ -69,8 +69,8 @@ $("#navbar a").on('click', function (event) {
 	}
 });
 
-$("#scroll-down").on('click', function (event) {
-	if (this.hash !== "") {
+$('#scroll-down').on('click', function (event) {
+	if (this.hash !== '') {
 		currentlyScrolling = true;
 
 		event.preventDefault();
@@ -93,7 +93,7 @@ $(document).ready(function () {
 
 	setTimeout(function() {
 		position = 0;
-		$('#experience, #about, #contact').css("display", "block");
+		$('#experience, #about, #contact').css('display', 'block');
 	}, 7000)
 
 	$(document).bind('wheel', function (e) {
