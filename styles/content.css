@@ -22,30 +22,32 @@ p {
 }
 
 .btn-circle { 
-	width: 100px; 
-	height: 100px; 
-	padding: 10px 16px; 
-	border-radius: 50px; 
-	font-size: 40px; 
-	text-align: center; 
+	width: 100px;
+	height: 100px;
+	padding: 10px 16px;
+	border-radius: 50px;
+	font-size: 40px;
+	text-align: center;
 }
 
 .btn-light {
 	background-color: #eeeeee;
-	border-color: #cccccc;
+	border-color: #17a2b8;
+	border-width: 3px;
 }
 
-.btn-light:hover {
+.btn-light:hover, .btn-light:focus {
 	background-color: #cccccc;
+	border-color: #0f6674;
 }
 
 @media (max-width: 575px) {
 	.btn-circle { 
-		width: 75px; 
-		height: 75px; 
-		padding: 10px 16px; 
-		border-radius: 37.5px; 
-		font-size: 30px; 
-		text-align: center; 
+		width: 75px;
+		height: 75px;
+		padding: 10px 16px;
+		border-radius: 37.5px;
+		font-size: 30px;
+		text-align: center;
 	}
 }
