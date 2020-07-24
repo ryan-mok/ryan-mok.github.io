@@ -12,37 +12,30 @@ h2 {
 }
 
 #hello {
-	opacity: 0;
 	-webkit-animation: fade-in 2s;
 	animation: fade-in 2s;
 	-webkit-animation-delay: 1s;
 	animation-delay: 1s;
 	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
-	visibility: hidden;
-	opacity: 0;
 }
 
 #like {
-	-webkit-animation: fade-in 2s;
-	animation: fade-in 2s;
+	-webkit-animation: fade-up 1s;
+	animation: fade-up 1s;
 	-webkit-animation-delay: 3s;
 	animation-delay: 3s;
 	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
-	visibility: hidden;
-	opacity: 0;
 }
 
 #love {
-	-webkit-animation: fade-in 2s;
-	animation: fade-in 2s;
+	-webkit-animation: fade-up 1s;
+	animation: fade-up 1s;
 	-webkit-animation-delay: 5s;
 	animation-delay: 5s;
 	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
-	visibility: hidden;
-	opacity: 0;
 }
 
 #scroll-down {
@@ -63,32 +56,4 @@ h2 {
 	animation-delay: 7s;
 	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
-	visibility: hidden;
-	opacity: 0;
-}
-
-@-webkit-keyframes animate-scroll {
-	0% {
-		-webkit-transform: rotate(-45deg) translate(50px, -50px);
-		visibility: hidden;
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: rotate(-45deg) translate(0, 0);
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-@keyframes animate-scroll {
-	0% {
-		transform: rotate(-45deg) translate(30px, -30px);
-		visibility: hidden;
-		opacity: 0;
-	}
-	100% {
-		transform: rotate(-45deg) translate(0, 0);
-		visibility: visible;
-		opacity: 1;
-	}
 }

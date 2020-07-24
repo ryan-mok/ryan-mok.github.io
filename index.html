@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="stylesheet" href="styles/home.css">
 	<link rel="stylesheet" href="styles/content.css">
+	<link rel="stylesheet" href="styles/animations.css">
 	
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Pacifico&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -135,19 +136,19 @@
 						<h3 class="pb-5">let's connect</h3>
 						<div class="row align-items-center pt-5">
 							<div class="col pl-sm-5">
-								<button id = "email" type="button" class="btn btn-light btn-circle" data-toggle="tooltip" data-placement="top" title="Copy email to clipboard" onclick="copyEmail();">
+								<button id = "email" type="button" class="btn btn-light btn-circle" data-toggle="tooltip" data-placement="top" title="Copy email to clipboard" onclick="copyEmail(); this.blur();">
 									<i class="fa fa-envelope"></i>
 								</button>
 								<p class="pt-2">hello</p>
 							</div>
 							<div class="col">
-								<button type="button" class="btn btn-light btn-circle" data-toggle="tooltip" data-placement="top" title="Open LinkedIn in a new tab" onclick="window.open('https://www.linkedin.com/in/ryanmok/');">
+								<button type="button" class="btn btn-light btn-circle" data-toggle="tooltip" data-placement="top" title="Open LinkedIn in a new tab" onclick="window.open('https://www.linkedin.com/in/ryanmok/'); this.blur();">
 									<i class="fa fa-linkedin"></i>
 								</button>
 								<p class="pt-2">ryanmok</p>
 							</div>
 							<div class ="col pr-sm-5">
-								<button type="button" class="btn btn-light btn-circle" data-toggle="tooltip" data-placement="top" title="Open GitHub in a new tab" onclick="window.open('https://github.com/ryan-mok');">
+								<button type="button" class="btn btn-light btn-circle" data-toggle="tooltip" data-placement="top" title="Open GitHub in a new tab" onclick="window.open('https://github.com/ryan-mok'); this.blur()">
 									<i class="fa fa-github"></i>
 								</button>
 								<p class="pt-2">ryan-mok</p>
