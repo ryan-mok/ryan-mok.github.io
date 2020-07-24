@@ -1,4 +1,8 @@
 @-webkit-keyframes fade-in {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
 	100% {
 		visibility: visible;
 		opacity: 1;
@@ -6,6 +10,10 @@
 }
 
 @keyframes fade-in {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
 	100% {
 		visibility: visible;
 		opacity: 1;
@@ -14,7 +22,9 @@
 
 @-webkit-keyframes fade-up {
 	0% {
-		-webkit-transform: translateY(10px)
+		visibility: hidden;
+		opacity: 0;
+		-webkit-transform: translateY(10px);
 	}
 	100% {
 		visibility: visible;
@@ -24,7 +34,9 @@
 
 @keyframes fade-up {
 	0% {
-		transform: translateY(10px)
+		transform: translateY(10px);
+		visibility: hidden;
+		opacity: 0;
 	}
 	100% {
 		visibility: visible;
@@ -35,6 +47,8 @@
 @-webkit-keyframes animate-scroll {
 	0% {
 		-webkit-transform: rotate(-45deg) translate(50px, -50px);
+		visibility: hidden;
+		opacity: 0;
 	}
 	100% {
 		-webkit-transform: rotate(-45deg) translate(0, 0);
@@ -46,6 +60,8 @@
 @keyframes animate-scroll {
 	0% {
 		transform: rotate(-45deg) translate(30px, -30px);
+		visibility: hidden;
+		opacity: 0;
 	}
 	100% {
 		transform: rotate(-45deg) translate(0, 0);
