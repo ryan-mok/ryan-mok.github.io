@@ -1,8 +1,19 @@
-#experience { background: #333333; }
-#about { background: #222222; }
+#experience { 
+	background-image: url("../images/experience.jpg");
+	background-position: center;
+  	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#about { 
+	background-image: url("../images/about.jpg");
+	background-position: center;
+  	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 #contact {
-	background-image: url("../images/contact.jpeg");
+	background-image: url("../images/contact.jpg");
 	background-position: center;
   	background-repeat: no-repeat;
 	background-size: cover;
