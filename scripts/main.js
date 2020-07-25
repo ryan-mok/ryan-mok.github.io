@@ -39,12 +39,6 @@ function animate(position) {
 	});
 }
 
-function init() {
-	$('#experience, #about, #contact').css('display', 'none');
-	$('body, .navbar, #hello, #like, #love, #scroll-down').css('visibility', 'hidden');
-	$('body, .navbar, #hello, #like, #love, #scroll-down').css('opacity', 0);
-}
-
 $('body').scrollspy({target: '.navbar', offset: 50});
 
 $('#navbar a').on('click', function (event) {
@@ -88,8 +82,7 @@ $('#scroll-down').on('click', function (event) {
 
 
 $(document).ready(function () {
-	animate(0);
-	init();
+	$('#experience, #about, #contact').css('display', 'none');
 
 	setTimeout(function() {
 		position = 0;
