@@ -101,10 +101,13 @@ $(document).ready(function () {
 		scrollDebounced(e);
 	}, { passive: false });
 
-	document.addEventListener('touchstart', function(e) {
+	document.addEventListener('touchmove', function(e) {
 		e.preventDefault();
-		touchStart = e.touches[0].clientY;
 	}, { passive: false })
+
+	$(document).bind('touchstart', function (e) {
+		touchStart = e.touches[0].clientY;
+	});
 
 	$(document).bind('touchend', function (e) {
 		var touchEnd = e.originalEvent.changedTouches[0].clientY;

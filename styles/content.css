@@ -39,12 +39,12 @@ p {
 	border-radius: 50px;
 	font-size: 40px;
 	text-align: center;
+	border-width: 3px;
 }
 
 .btn-light {
 	background-color: #eeeeee;
 	border-color: #17a2b8;
-	border-width: 3px;
 }
 
 .btn-light:hover, .btn-light:focus {
@@ -60,6 +60,7 @@ p {
 		border-radius: 37.5px;
 		font-size: 30px;
 		text-align: center;
+		border-width: 2px;
 	}
 }
 
@@ -71,6 +72,7 @@ p {
 		border-radius: 45px;
 		font-size: 35px;
 		text-align: center;
+		border-width: 3px;
 	}
 }
 
@@ -82,5 +84,6 @@ p {
 		border-radius: 37.5px;
 		font-size: 30px;
 		text-align: center;
+		border-width: 2px;
 	}
 }
