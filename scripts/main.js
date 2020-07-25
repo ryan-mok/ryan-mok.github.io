@@ -91,8 +91,10 @@ $(document).ready(function () {
 
 	$(document).bind('wheel', function (e) {
 		if (e.originalEvent.wheelDelta < 0) {
+			event.preventDefault();
 			scrollDown();
 		} else {
+			event.preventDefault();
 			scrollUp();
 		}
 		return false;
@@ -100,8 +102,10 @@ $(document).ready(function () {
 
 	$(document).bind('mousewheel', function (e) {
 		if (e.originalEvent.wheelDelta < 0) {
+			event.preventDefault();
 			scrollDown();
 		} else {
+			event.preventDefault();
 			scrollUp();
 		}
 		return false;
@@ -109,8 +113,10 @@ $(document).ready(function () {
 
 	$(document).bind('DOMMouseScroll', function (e) {
 		if (e.originalEvent.detail > 0) {
+			event.preventDefault();
 			scrollDown();
 		} else {
+			event.preventDefault();
 			scrollUp();
 		}
 		return false;
@@ -123,8 +129,10 @@ $(document).ready(function () {
 	$(document).bind('touchend', function (e) {
 		var touchEnd = e.originalEvent.changedTouches[0].clientY;
 		if (touchStart > touchEnd + 5) {
+			event.preventDefault();
 			scrollDown();
 		} else if (touchStart < touchEnd - 5) {
+			event.preventDefault();
 			scrollUp();
 		}
 	});
@@ -133,8 +141,10 @@ $(document).ready(function () {
 		var down = { 40: true, 32: true, 33: true, 34: true, 35: true};
 		var up = { 38: true, 33: true, 36: true };
 		if (down[e.keyCode]) {
+			event.preventDefault();
 			scrollDown()
 		} else if (up[e.keyCode]) {
+			event.preventDefault();
 			scrollUp()
 		}
 	});
