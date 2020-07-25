@@ -64,27 +64,15 @@ body {
 }
 
 .h-95 {
-	height: 95% !important;
+	height: 95%;
 }
 
 .h-5 {
-	height: 5% !important;
-}
-
-.h-70 {
-	height: 70% !important;
-}
-
-.h-10 {
-	height: 10% !important;
-}
-
-.h-20 {
-	height: 20% !important;
+	height: 5%;
 }
 
 @media (max-width: 575px) {
-	html { font-size: 0.6rem !important; }
+	html { font-size: 0.6rem; }
 	.navbar { font-size: 1.67rem; }
 	.navbar-brand { font-size: 2.08rem; }
 }

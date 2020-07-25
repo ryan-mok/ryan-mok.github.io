@@ -138,7 +138,7 @@ $(document).ready(function () {
 	});
 
 	$(document).bind('keydown', function(e) {
-		var down = { 40: true, 32: true, 33: true, 34: true, 35: true};
+		var down = { 40: true, 32: true, 33: true, 34: true, 35: true };
 		var up = { 38: true, 33: true, 36: true };
 		if (down[e.keyCode]) {
 			event.preventDefault();

@@ -23,8 +23,8 @@ h2 {
 }
 
 #like {
-	-webkit-animation: fade-up 1s;
-	animation: fade-up 1s;
+	-webkit-animation: fade-down 1s;
+	animation: fade-down 1s;
 	-webkit-animation-delay: 3s;
 	animation-delay: 3s;
 	-webkit-animation-fill-mode: forwards;
@@ -34,8 +34,8 @@ h2 {
 }
 
 #love {
-	-webkit-animation: fade-up 1s;
-	animation: fade-up 1s;
+	-webkit-animation: fade-down 1s;
+	animation: fade-down 1s;
 	-webkit-animation-delay: 5s;
 	animation-delay: 5s;
 	-webkit-animation-fill-mode: forwards;
