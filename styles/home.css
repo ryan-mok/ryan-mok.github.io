@@ -1,0 +1,67 @@
+#home {
+	background: rgb(12, 12, 12);
+}
+
+h1 {
+	font-family: 'Pacifico', cursive;
+	font-size: 5rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+#hello {
+	-webkit-animation: fade-in 2s;
+	animation: fade-in 2s;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+	opacity: 0;
+}
+
+#like {
+	-webkit-animation: fade-down 1s;
+	animation: fade-down 1s;
+	-webkit-animation-delay: 3s;
+	animation-delay: 3s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+	opacity: 0;
+}
+
+#love {
+	-webkit-animation: fade-down 1s;
+	animation: fade-down 1s;
+	-webkit-animation-delay: 5s;
+	animation-delay: 5s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+	opacity: 0;
+}
+
+#scroll-down {
+	position: absolute;
+	bottom: 5vh;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	border-left: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	box-sizing: border-box;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: animate-scroll 1.5s;
+	animation: animate-scroll 1.5s;
+	-webkit-animation-delay: 7s;
+	animation-delay: 7s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+	opacity: 0;
+}
