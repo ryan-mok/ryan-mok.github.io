@@ -41,11 +41,11 @@ function animate(position) {
 
 $('body').scrollspy({target: '.navbar', offset: 50});
 
-$('#navbar a').on('click', function (event) {
+$('#navbar a').on('click', function (e) {
 	if (this.hash !== '') {
 		currentlyScrolling = true;
 
-		event.preventDefault();
+		e.preventDefault();
 		var hash = this.hash;
 
 		switch(hash) {
@@ -63,11 +63,11 @@ $('#navbar a').on('click', function (event) {
 	}
 });
 
-$('#scroll-down').on('click', function (event) {
+$('#scroll-down').on('click', function (e) {
 	if (this.hash !== '') {
 		currentlyScrolling = true;
 
-		event.preventDefault();
+		e.preventDefault();
 		var hash = this.hash;
 
 		position = 1;
@@ -80,6 +80,13 @@ $('#scroll-down').on('click', function (event) {
 	}
 });
 
+var scrollDebounced = _.debounce(function(e) {
+	if (e.wheelDelta < 0) {
+		scrollDown();
+	} else {
+		scrollUp();
+	}
+}, 50, { leading: true, trailing: false });
 
 $(document).ready(function () {
 	$('#experience, #about, #contact').css('display', 'none');
@@ -89,50 +96,21 @@ $(document).ready(function () {
 		$('#experience, #about, #contact').css('display', 'block');
 	}, 7000)
 
-	$(document).bind('wheel', function (e) {
-		if (e.originalEvent.wheelDelta < 0) {
-			event.preventDefault();
-			scrollDown();
-		} else {
-			event.preventDefault();
-			scrollUp();
-		}
-		return false;
-	});
+	document.addEventListener('wheel', function (e) {
+		e.preventDefault();
+		scrollDebounced(e);
+	}, { passive: false });
 
-	$(document).bind('mousewheel', function (e) {
-		if (e.originalEvent.wheelDelta < 0) {
-			event.preventDefault();
-			scrollDown();
-		} else {
-			event.preventDefault();
-			scrollUp();
-		}
-		return false;
-	});
-
-	$(document).bind('DOMMouseScroll', function (e) {
-		if (e.originalEvent.detail > 0) {
-			event.preventDefault();
-			scrollDown();
-		} else {
-			event.preventDefault();
-			scrollUp();
-		}
-		return false;
-	});
-
-	$(document).bind('touchstart', function (e) {
-		touchStart = e.originalEvent.touches[0].clientY;
-	});
+	document.addEventListener('touchstart', function(e) {
+		e.preventDefault();
+		touchStart = e.touches[0].clientY;
+	}, { passive: false })
 
 	$(document).bind('touchend', function (e) {
 		var touchEnd = e.originalEvent.changedTouches[0].clientY;
 		if (touchStart > touchEnd + 5) {
-			event.preventDefault();
 			scrollDown();
 		} else if (touchStart < touchEnd - 5) {
-			event.preventDefault();
 			scrollUp();
 		}
 	});
@@ -141,10 +119,10 @@ $(document).ready(function () {
 		var down = { 40: true, 32: true, 33: true, 34: true, 35: true };
 		var up = { 38: true, 33: true, 36: true };
 		if (down[e.keyCode]) {
-			event.preventDefault();
+			e.preventDefault();
 			scrollDown()
 		} else if (up[e.keyCode]) {
-			event.preventDefault();
+			e.preventDefault();
 			scrollUp()
 		}
 	});

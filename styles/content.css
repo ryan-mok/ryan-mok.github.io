@@ -62,3 +62,25 @@ p {
 		text-align: center;
 	}
 }
+
+@media (max-height: 840px) {
+	.btn-circle { 
+		width: 90px;
+		height: 90px;
+		padding: 10px 16px;
+		border-radius: 45px;
+		font-size: 35px;
+		text-align: center;
+	}
+}
+
+@media (max-height: 650px) {
+	.btn-circle { 
+		width: 75px;
+		height: 75px;
+		padding: 10px 16px;
+		border-radius: 37.5px;
+		font-size: 30px;
+		text-align: center;
+	}
+}
