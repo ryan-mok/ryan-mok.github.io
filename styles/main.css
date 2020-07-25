@@ -13,6 +13,7 @@ body {
 	font-family: 'Lato', sans-serif;
 	background-color: rgb(12, 12, 12);
 	color: #ebebeb;
+	-webkit-overflow-scrolling: auto;
 	-webkit-animation: fade-in 1s;
 	animation: fade-in 1s;
 	-webkit-animation-delay: 1s;
